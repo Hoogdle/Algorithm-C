@@ -98,6 +98,8 @@ int main()
 
     printf("%d",big);
 
+    free(ex); // free 추가!
+
     return 0;
 }
 

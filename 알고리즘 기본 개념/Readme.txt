@@ -1,0 +1,1 @@
+유튜버 동빈나님의 https://www.youtube.com/watch?v=qQ5iLNjpxSk&list=PLRx0vPvlEmdDHxCvAQS1_6XV4deOwfVrz&index=1 강의들을 정리한 폴더입니다.

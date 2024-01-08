@@ -12,6 +12,8 @@
 
 //   0 1 2 3 4 홀수개 input 2 want 2 move 2 num 2
 
+// for문 안에서 i+1 이 반복, 효율성을 위해 count 변수로 바꿈.
+
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -36,6 +38,7 @@ int main()
     for(int i=0;i<num;++i)
     {
         int data;
+        int count = i+1;
         scanf("%d",&data);
         struct Info* temp;
         temp = (struct Info*)malloc(sizeof(struct Info));
@@ -59,16 +62,16 @@ int main()
             else    
                 printf("%d\n",result1);
         } // 문제없음
-        else if((i+1)%2==0) // 짝수개인 경우
+        else if(count%2==0) // 짝수개인 경우
         {
             int result;
-            result = search_even((i+1)/2);
+            result = search_even(count/2);
             printf("%d\n",result);
         }
-        else if((i+1)%2!=0) // 홀수개인 경우
+        else if(count%2!=0) // 홀수개인 경우
         {
             int result;
-            result = search_odd((i+1)/2);
+            result = search_odd(count/2);
             printf("%d\n",result);
         }
 
@@ -77,7 +80,7 @@ int main()
     return 0;
 }
 
-void sort(struct Info* a)
+void sort(struct Info* a) // 오름차순으로 정렬
 {
     struct Info* search;
     struct Info* prev = NULL;
